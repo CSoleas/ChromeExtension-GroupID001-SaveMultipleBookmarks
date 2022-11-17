@@ -1,4 +1,4 @@
-## ChromeExtension-SaveMultipleBookmarks
+## Save Multiple Bookmarks
 
 #### You can find the Published Chrome Extension at:
 https://chrome.google.com/webstore/detail/save-multiple-bookmarks/caghbainnkeifhfokfhmnbhfjbnadaok
