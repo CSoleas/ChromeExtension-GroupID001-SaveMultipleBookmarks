@@ -1,0 +1,494 @@
+* {
+    user-select: none;
+}
+
+body {
+    margin: 0;
+}
+
+.modalwindowOpen {
+    animation: zoom-in-effect 0.03s ease;
+}
+
+@keyframes zoom-in-effect {
+    0% {
+        transform: scale(0.5, 0.5);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.Background {
+    box-shadow: 0px 2px #d2d4d4;
+    margin: auto;
+    width: 440px;
+    height: 513px;
+    padding-right: 3px;
+    padding-left: 3px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.Header {
+    margin-left: 13px;
+    margin-top: 13px;
+    font-size: 15px;
+}
+
+.CounterBox {
+    left: 376px;
+    position: absolute;
+    top: 17px;
+    width: 50px;
+    text-align: right;
+}
+
+.Ele_NameAndURL {
+    font-size: 12px;
+    margin-left: 13px;
+    margin-right: 12px;
+}
+
+.InputName {
+    margin-left: 16px;
+    margin-bottom: 8px;
+    border: 1px solid #e0e1e5;
+    outline-color: #1a73e8;
+    border-radius: 3px;
+    padding: 6px 8px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    height: 17px;
+    width: 348px;
+    padding-bottom: 9px;
+}
+
+.InputName::selection,
+.InputURL::selection {
+    background: #9cc3f5;
+}
+
+.InputURL {
+    width: 349px;
+    padding: 6px 8px;
+    margin-left: 27px;
+    border: 1px solid #e0e1e5;
+    outline-color: #1a73e8;
+    border-radius: 3px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    height: 17px;
+    padding-right: 7px;
+    padding-bottom: 9px;
+}
+
+.InputURL-error {
+    width: 349px;
+    padding: 6px 8px;
+    margin-left: 27px;
+    border: 1px solid #d93025;
+    outline-color: #d93025;
+    border-radius: 3px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    height: 17px;
+    padding-right: 7px;
+    padding-bottom: 9px;
+}
+
+.treebox {
+    height: 320px;
+    border: 1px solid #e0e1e5;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-right: 3px;
+    padding-left: 3px;
+    overflow-x: auto;
+    overflow-y: auto;
+    margin-left: 13px;
+    margin-right: 13px;
+    margin-top: 8px;
+    cursor: default;
+}
+
+.treebox:focus {
+    border: 1px solid #1a73e8;
+    outline: 1px solid #1a73e8;
+    border-radius: 5px;
+}
+
+.bulletpoint-container:first-child {
+    padding-left: 0px;
+    margin: 0;
+}
+
+.bulletpoint-container {
+    margin: 0;
+    margin-left: -10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.bulletpoint {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    align-items: center;
+    user-select: none;
+}
+
+.bulletpoint-name {
+    display: flex;
+    align-items: center;
+
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 22px;
+    white-space: nowrap;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.bulletpoint-name:focus {
+    background: #c9defa;
+    user-select: none;
+    outline: none;
+}
+
+.bulletpoint-name-focus {
+    display: flex;
+    align-items: center;
+
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 22px;
+    white-space: nowrap;
+    text-overflow: clip;
+    overflow: hidden;
+    background: #c9defa;
+    user-select: none;
+    outline: none;
+}
+
+.treebox:focus-within {
+    border: 1px solid #1a73e8;
+    outline: 1px solid #1a73e8;
+    border-radius: 5px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.img1 {
+    display: flex;
+    align-items: center;
+    content: url("./icons/IconArrow.png");
+    height: 19px;
+    margin-top: 2px;
+    width: 14px;
+}
+
+.img2 {
+    display: flex;
+    align-items: center;
+    content: url("./icons/IconFolder.png");
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 20px;
+    margin-top: 1px;
+    width: 17px;
+}
+
+.img3 {
+    width: 14px;
+    height: 19px;
+}
+
+.container {
+    margin: 0px;
+}
+
+/* MODAL ONE BUTTONS AREA */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ANIMATION */
+button span {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #d2e4fb;
+
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+
+    animation: ripple 1s;
+    opacity: 0;
+}
+
+@keyframes ripple {
+    from {
+        opacity: 1;
+        transform: scale(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(18);
+    }
+}
+
+.buttonArea {
+    margin-left: 13px;
+    margin-right: 13px;
+    margin-top: 23px;
+}
+
+.Button1 {
+    background-color: white;
+    border: 1px solid #e0e1e5;
+    border-radius: 4px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 96px;
+    height: 32px;
+
+    color: #1a73e8;
+    padding-bottom: 3px;
+}
+
+.Button2 {
+    background-color: #1a73e8;
+    border: 1px solid #1a73e8;
+    border-radius: 4px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 96px;
+    height: 32px;
+    margin-left: 117px;
+    margin-right: 8px;
+
+    color: white;
+    padding-bottom: 3px;
+}
+
+.Button2:disabled,
+.Button2:disabled:hover {
+    background-color: #f2f2f2;
+    color: #72777c;
+    border: 0px;
+}
+
+.Button3 {
+    background-color: white;
+    border: 1px solid #e0e1e5;
+    border-radius: 4px;
+    text-align: center;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 96px;
+    height: 32px;
+
+    color: #1a73e8;
+    transition: 0.3;
+    vertical-align: center;
+    padding-bottom: 3px;
+}
+
+.Button1:focus,
+.Button3:focus {
+    /* border: 1px solid #1A73E8; */
+    outline-color: #1a73e8;
+}
+
+.Button2:focus,
+.SortedButton2:focus,
+.saveButtonSct:focus {
+    outline: 2px solid #1a73e8;
+    border: 1px solid white;
+    border-radius: 4px;
+    outline-color: #1a73e8;
+}
+
+Button:focus {
+    outline-color: #1a73e8;
+}
+
+.Button2:hover,
+.SortedButton2:hover,
+.saveButtonSct:hover {
+    background-color: #2f7de3;
+    /* transition: 0.7s; */
+    cursor: default;
+}
+.Button1:hover,
+.Button3:hover,
+.SortedButton3:hover,
+.SortedButton4:hover {
+    background-color: #ebf3fd;
+    transition: 0.3s;
+    cursor: default;
+}
+
+/* MODAL TWO */
+
+.backdrop {
+    display: block;
+    height: 513px;
+    opacity: 0;
+    width: 446px;
+    position: fixed;
+    z-index: 1;
+}
+
+/* HERE */
+.Modal2Container {
+    background-color: #fff;
+    border: 1px solid #e0e1e5;
+    border-radius: 0.5em;
+    box-shadow: -3px 10px 10px -5px #adadad, -5px 3px 10px -5px #adadad;
+    /* box-shadow: 0 3px #d2d4d4; */
+    height: 155px;
+    left: 60px;
+    position: absolute;
+    right: 60px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    top: 240px;
+    width: 320px;
+    z-index: 2;
+}
+
+.Modal2Header {
+    font-size: 14px;
+    margin-left: 13px;
+    margin-top: 13px;
+}
+
+.Modal2label {
+    font-size: 12px;
+    margin-left: 13px;
+}
+
+.Modal2Input {
+    border: 1px solid #e0e1e5;
+    border-radius: 3px;
+    left: 13px;
+    margin-left: 17px;
+    right: 12px;
+    width: 224px;
+    padding: 6px 7px 9px 8px;
+    font-size: 12px;
+    height: 17px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin-bottom: 25px;
+}
+
+.Modal2Input:focus {
+    border: 1px solid #1a73e8;
+    outline: 1px solid #1a73e8;
+}
+
+.Modal2button1 {
+    background-color: #1a73e8;
+    border: 1px solid #1a73e8;
+    border-radius: 4px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 72px;
+    height: 32px;
+    margin-left: 151px;
+
+    color: white;
+    padding-bottom: 3px;
+}
+.Modal2button1:focus {
+    border: 3px solid white;
+    border-radius: 4px;
+    outline-color: #1a73e8;
+}
+
+.Modal2button2 {
+    background-color: white;
+    border: 1px solid #e0e1e5;
+    border-radius: 4px;
+    text-align: center;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+
+    width: 72px;
+    height: 32px;
+    margin-left: 8px;
+
+    color: #1a73e8;
+    transition: 0.3;
+    vertical-align: center;
+    padding-bottom: 3px;
+}
+
+.Modal2button1:hover {
+    background-color: #2f7de3;
+    transition: 0.7s;
+    cursor: default;
+}
+
+.Modal2button2:hover {
+    background-color: #ebf3fd;
+    transition: 0.5s;
+    cursor: default;
+}
+
+/* Closing after Save Animation */
+.hiddentile {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 20%;
+    background-color: #1a73e8;
+    transition: width 0.5s ease;
+}
+
+.active {
+    width: 100%;
+}
+
+.hiddentile:nth-child(1) {
+    top: calc(4 * 20%);
+    transition-delay: 0s;
+}
+.hiddentile:nth-child(2) {
+    top: calc(3 * 20%);
+    transition-delay: 0.2s;
+}
+.hiddentile:nth-child(3) {
+    top: calc(2 * 20%);
+    transition-delay: 0.4s;
+}
+.hiddentile:nth-child(4) {
+    top: calc(1 * 20%);
+    transition-delay: 0.6s;
+}
+.hiddentile:nth-child(5) {
+    top: calc(0 * 20%);
+    transition-delay: 0.8s;
+}
